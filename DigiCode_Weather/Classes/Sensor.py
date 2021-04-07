@@ -1,8 +1,9 @@
-import Adafruit_DHT
-from Classes.SensorConnetionError import SensorConnetionError
+from Classes.SensorConnectionError import SensorConnectionError
+# import Adafruit_DHT
 
 
 class Sensor:
+    Adafruit_DHT = __import__("Adafruit_DHT")
 
     def __init__(self, pin, sensor_model):
         self.__pin = pin
@@ -10,12 +11,12 @@ class Sensor:
         # self.sensor_model = getattr(Adafruit_DHT, "DHT"+str(sensor_model))
 
     def __run(self):
-        self.__humidity, self.__temp = Adafruit_DHT.read_retry(self.__sensor_model, self.__pin)
-        #try:
+        self.__humidity, self.__temp = self.Adafruit_DHT.read_retry(self.__sensor_model, self.__pin)
+        # try:
         if self.__humidity is None or self.__temp is None:
             print("Fail sensor")
-            raise SensorConnetionError("Fail sensor")
-        #except SensorConnetionError:
+            raise SensorConnectionError("Fail sensor")
+        # except SensorConnectionError:
         #    pass
 
     def get_temp(self):
