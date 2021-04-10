@@ -1,51 +1,69 @@
-import math
-
-from Classes.SensorConnectionError import SensorConnetionError
-
-
-class Sensor:
-
-    def __init__(self, pin, sensor_model):
-        self.pin = pin
-        self.sensor_model = "fild" + sensor_model
-
-    def run(self):
-        self.humidity = 2
-        self.temperature = self.pin ** 2
-        #try:
-        if self.humidity is None or self.temperature is None:
-            # print("Fail sensor")
-            raise SensorConnetionError("Fail sensor")
-        #except er.SensorConnetionError as error :
-         #   print('SensorConnetionError:', error)
-        # print(11111)
-        # print(self.pin, self.sensor_model, self.humidity, self.temperature)
-        # return self.humidity, self.temperature
-    @property
-    def pl7p(self):
-        print(self.pin, self.sensor_model, self.humidity, self.temperature)
-
-
-new_sensor = Sensor(5, "1")
-new_sensor.run()
-#new_sensor.p()
-
-#####################################
-def x1():
-    print("x1_pass")
-
-def x2():
-    print("x2_pass")
-
-#####################################
-
-exec("x"+"1()")
-x="l7p"
-getattr(new_sensor,"p"+str(x))
-
-m = __import__("math")
-print(m.sqrt(49))
+# import math
+# import pyowm
 import requests
-api = requests.get('http://dataservice.accuweather.com/currentconditions/v1/11586?apikey=%09ASsOGGnagNRREyX3tFE75igaxQnkPfhL').json()
-humidity = api[0][0][0]
-Temperature = api[0][1][0]
+import datetime
+# import asyncio
+# import logging
+
+LOCATION_KEY_ACCUWEATHER = '11586'
+API_KEY_ACCUWEATHER = "CFEvIq8sL9Lq6JoJSQvK0XPpjUeYoX66"
+LOCATION_KEY_OWM = '614455'
+API_KEY_OWM = "3fd60d0b7b747ee2b82669d7cc84b4e0"
+LATITUDE = 39.504664648
+LONGITUDE = 46.336498654
+
+# from accuweather import (
+#     AccuWeather,
+#     ApiError,
+#     InvalidApiKeyError,
+#     InvalidCoordinatesError,
+#     RequestsExceededError,
+# )
+#
+# from aiohttp import ClientError, ClientSession
+#
+# LOCATION_KEY = '11586'
+# API_KEY = "ASsOGGnagNRREyX3tFE75igaxQnkPfhL"
+# LATITUDE = 39.504664648
+# LONGITUDE = 46.336498654
+# AccuWeather(API_KEY, ClientSession(),
+#             )
+# async def main():
+#     async with ClientSession() as websession:
+#         accuweather = AccuWeather(
+#             API_KEY, websession, latitude=LATITUDE, longitude=LONGITUDE
+#         )
+#         current_conditions = await accuweather.async_get_current_conditions()
+#         forecast = await accuweather.async_get_forecast(metric=True)
+#
+#         print(f"Location: {accuweather.location_name} ({accuweather.location_key})")
+#         print(f"Requests remaining: {accuweather.requests_remaining}")
+#         print(f"Current: {current_conditions}")
+#         print(f"Forecast: {forecast}")
+#
+#
+# print("AccuWeather")
+
+# loop = asyncio.get_event_loop().run_until_complete(main())
+#
+#
+# key_1 = "1e1e7710151b15253c1e16aa2ee79792"
+# owm = pyowm.OWM(api_key=key_1)
+# w = owm.weather_manager().weather_at_id(614455).weather
+#
+# print("OpenWeatherMap")
+# print(w.temperature('celsius'), w.humidity)
+api_owm_hourly: dict = requests.get(f'http://api.openweathermap.org/data/2.5/onecall?lat={LATITUDE}&lon={LONGITUDE}&exclude=alerts,minutely,current,daily&appid={API_KEY_OWM}&units=metric').json()
+api_owm_hourly_data = api_owm_hourly["hourly"]
+
+def get_api_owm_data(api_owm_data):
+    date, temp, humidity, weather = list(), list(), list(), list()
+    for d in api_owm_data:
+        date.append(str(datetime.datetime.fromtimestamp(int(d["dt"]))))
+        temp.append(d["temp"])
+        humidity.append(d["humidity"])
+        weather.append(d["weather"][0]["main"])
+    return date, temp, humidity, weather
+date, temp, humidity, weather = get_api_owm_data(api_owm_hourly_data)
+api_owm_hourly_data_filtered = {"date": date, "temp": temp, "humidity": humidity, "weather": weather}
+[[print(f"Hour {i+1}"),print("date :", api_owm_hourly_data_filtered["date"][i]), print("temp :", api_owm_hourly_data_filtered["temp"][i]), print("humidity :", api_owm_hourly_data_filtered["humidity"][i]), print("weather :", api_owm_hourly_data_filtered["weather"][i]),print("\n")] for i in range(len(api_owm_hourly_data_filtered["date"]))]
