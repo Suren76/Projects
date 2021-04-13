@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ed5411c-c428-4df7-addb-79bc413646eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apis_input_data_connect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classes/Weather.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/Weather.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/img/25-252076_background-image-for-weather-app.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/img/2940537-200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/img/app_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/img/download.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Styles/img/kisspng-android-the-weather-channel-weather-forecasting-sun-lounger-5b14d08471afe0.0729201615280907564657.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apis_input_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/api_weather_use_lib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Weather(api).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apis_input_data_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/apis_input_data_connect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +59,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Python/python procedural programing/homework6/test10/syunik_itc/__init__.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.23800196" />
   </component>
@@ -82,6 +88,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Classes/Sensor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Weather" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Classes" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Classes/Weather.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -177,6 +204,9 @@
     <configuration name="apis_input_data_connect" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="/usr/bin/python3.9" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
@@ -213,27 +243,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_requests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DigiCode_Weather" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Python/python testing/api_testing/homework3" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Python/python testing/api_testing/homework3/test_requests.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -257,19 +266,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.conf" />
+      <item itemvalue="Python.api_weather_use_lib" />
       <item itemvalue="Python.apis_input_data" />
       <item itemvalue="Python.apis_input_data_connect" />
       <item itemvalue="Python.Sensor" />
-      <item itemvalue="Python.test_requests" />
       <item itemvalue="Python.tests" />
-      <item itemvalue="Python.api_weather_use_lib" />
+      <item itemvalue="Python.Weather(api)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.apis_input_data_connect" />
         <item itemvalue="Python.tests" />
+        <item itemvalue="Python.Weather(api)" />
         <item itemvalue="Python.Sensor" />
-        <item itemvalue="Python.apis_input_data" />
         <item itemvalue="Python.apis_input_data" />
       </list>
     </recent_temporary>
@@ -317,26 +326,26 @@
       <screen x="0" y="27" width="1360" height="741" />
     </state>
     <state x="457" y="105" width="424" height="583" key="#com.intellij.ide.macro.MacrosDialog/0.27.1360.741@0.27.1360.741" timestamp="1618005041782" />
-    <state x="463" y="155" width="424" height="483" key="FileChooserDialogImpl" timestamp="1617755272045">
+    <state x="463" y="155" width="424" height="483" key="FileChooserDialogImpl" timestamp="1618284526212">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state x="463" y="155" width="424" height="483" key="FileChooserDialogImpl/0.27.1360.741@0.27.1360.741" timestamp="1617755272045" />
-    <state width="1314" height="146" key="GridCell.Tab.0.bottom" timestamp="1618025546616">
+    <state x="463" y="155" width="424" height="483" key="FileChooserDialogImpl/0.27.1360.741@0.27.1360.741" timestamp="1618284526212" />
+    <state width="1314" height="152" key="GridCell.Tab.0.bottom" timestamp="1618284958933">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="146" key="GridCell.Tab.0.bottom/0.27.1360.741@0.27.1360.741" timestamp="1618025546616" />
-    <state width="1314" height="146" key="GridCell.Tab.0.center" timestamp="1618025546614">
+    <state width="1314" height="152" key="GridCell.Tab.0.bottom/0.27.1360.741@0.27.1360.741" timestamp="1618284958933" />
+    <state width="1314" height="152" key="GridCell.Tab.0.center" timestamp="1618284958931">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="146" key="GridCell.Tab.0.center/0.27.1360.741@0.27.1360.741" timestamp="1618025546614" />
-    <state width="1314" height="146" key="GridCell.Tab.0.left" timestamp="1618025546610">
+    <state width="1314" height="152" key="GridCell.Tab.0.center/0.27.1360.741@0.27.1360.741" timestamp="1618284958931" />
+    <state width="1314" height="152" key="GridCell.Tab.0.left" timestamp="1618284958931">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="146" key="GridCell.Tab.0.left/0.27.1360.741@0.27.1360.741" timestamp="1618025546610" />
-    <state width="1314" height="146" key="GridCell.Tab.0.right" timestamp="1618025546615">
+    <state width="1314" height="152" key="GridCell.Tab.0.left/0.27.1360.741@0.27.1360.741" timestamp="1618284958931" />
+    <state width="1314" height="152" key="GridCell.Tab.0.right" timestamp="1618284958932">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="146" key="GridCell.Tab.0.right/0.27.1360.741@0.27.1360.741" timestamp="1618025546615" />
+    <state width="1314" height="152" key="GridCell.Tab.0.right/0.27.1360.741@0.27.1360.741" timestamp="1618284958932" />
     <state width="1314" height="206" key="GridCell.Tab.1.bottom" timestamp="1618005812566">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
