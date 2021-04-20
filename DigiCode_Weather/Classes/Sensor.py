@@ -1,9 +1,10 @@
-from Classes.SensorConnectionError import SensorConnectionError
+# import Classes.SensorConnectionError.SensorConnectionError
 # import Adafruit_DHT
 
 
 class Sensor:
     Adafruit_DHT = __import__("Adafruit_DHT")
+    SensorConnectionError = __import__("Classes.SensorConnectionError")
 
     def __init__(self, pin, sensor_model):
         self.__pin = pin
@@ -15,7 +16,7 @@ class Sensor:
         # try:
         if self.__humidity is None or self.__temp is None:
             print("Fail sensor")
-            raise SensorConnectionError("Fail sensor")
+            raise self.SensorConnectionError("Fail sensor")
         # except SensorConnectionError:
         #    pass
 

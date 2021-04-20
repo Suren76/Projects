@@ -1,6 +1,6 @@
 # import math
 # import pyowm
-import requests
+import requests.packages.urllib3.request
 import datetime
 # import asyncio
 # import logging
@@ -74,6 +74,28 @@ LONGITUDE = 46.336498654
 # date = api_accuweather_daily["Date"]
 # weather = api_accuweather_data["Day"]["PrecipitationType"]
 
-t = "2021-04-14T23:00:00"
+# t = "2021-04-17 02:00:00"
+#
+# print(t.split()[0].split("-")[2])
+#
+# import Classes.SensorConnectionError as ggg
+#
+# if t.split()[0].split("-")[2] != 5:
+#     raise ggg
 
-print(datetime.datetime.fromisoformat(t))
+# def d(n):
+#         num = int(input())
+#         num += 1
+#         yield num
+#
+#
+# while True:
+#     print(next(d(1)))
+import sched, time
+s = sched.scheduler(time.time, time.sleep)
+def do_something(sc):
+    def d():
+
+# s.enter(1, 1, do_something, (s,))
+# s.run()
+s.enter(5,1,do_something(s))

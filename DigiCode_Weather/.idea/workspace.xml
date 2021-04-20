@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,16 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9ed5411c-c428-4df7-addb-79bc413646eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Classes/Weather.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Styles/Weather.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Styles/img/25-252076_background-image-for-weather-app.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Styles/img/2940537-200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Styles/img/app_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Styles/img/download.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Styles/img/kisspng-android-the-weather-channel-weather-forecasting-sun-lounger-5b14d08471afe0.0729201615280907564657.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statistic.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Weather(api).py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Weather.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Weather.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/Type name of new folder1/1.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/Type name of new folder1/1.qrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/Weather.ui" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/Weather.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apis_input_data_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/apis_input_data_connect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Python/python procedural programing/homework6/test10/syunik_itc/__init__.py" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.23800196" />
   </component>
   <component name="RecentsManager">
@@ -70,30 +72,9 @@
       <recent name="$PROJECT_DIR$/.." />
     </key>
   </component>
-  <component name="RunManager" selected="Python.apis_input_data_connect">
+  <component name="RunManager" selected="Python.tests">
     <configuration default="true" type="CompoundRunConfigurationType">
       <toRun name="conf" type="PythonConfigurationType" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Sensor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Classes" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Classes/Sensor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Weather" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
@@ -243,6 +224,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="statistic" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/statistic.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,21 +267,21 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.conf" />
       <item itemvalue="Python.api_weather_use_lib" />
+      <item itemvalue="Python.conf" />
+      <item itemvalue="Python.Weather" />
       <item itemvalue="Python.apis_input_data" />
       <item itemvalue="Python.apis_input_data_connect" />
-      <item itemvalue="Python.Sensor" />
       <item itemvalue="Python.tests" />
-      <item itemvalue="Python.Weather(api)" />
+      <item itemvalue="Python.statistic" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.apis_input_data_connect" />
         <item itemvalue="Python.tests" />
-        <item itemvalue="Python.Weather(api)" />
-        <item itemvalue="Python.Sensor" />
+        <item itemvalue="Python.apis_input_data_connect" />
+        <item itemvalue="Python.statistic" />
         <item itemvalue="Python.apis_input_data" />
+        <item itemvalue="Python.Weather" />
       </list>
     </recent_temporary>
   </component>
@@ -310,14 +312,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="309" y="79" width="732" height="636" key="#Inspections" timestamp="1618694367243">
+      <screen x="0" y="27" width="1360" height="741" />
+    </state>
+    <state x="309" y="79" width="732" height="636" key="#Inspections/0.27.1360.741@0.27.1360.741" timestamp="1618694367243" />
     <state x="375" y="216" width="599" height="361" key="#Notifications" timestamp="1618001709639">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
     <state x="375" y="216" width="599" height="361" key="#Notifications/0.27.1360.741@0.27.1360.741" timestamp="1618001709639" />
-    <state x="138" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618005763845">
+    <state x="582" y="244" width="185" height="305" key="#Vim_Emulation" timestamp="1618610059881">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state x="138" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1360.741@0.27.1360.741" timestamp="1618005763845" />
+    <state x="582" y="244" width="185" height="305" key="#Vim_Emulation/0.27.1360.741@0.27.1360.741" timestamp="1618610059881" />
+    <state x="138" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618897788888">
+      <screen x="0" y="27" width="1360" height="741" />
+    </state>
+    <state x="138" y="27" width="1084" height="741" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1360.741@0.27.1360.741" timestamp="1618897788888" />
     <state x="392" y="189" width="565" height="416" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1617671610986">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
@@ -330,46 +340,46 @@
       <screen x="0" y="27" width="1360" height="741" />
     </state>
     <state x="463" y="155" width="424" height="483" key="FileChooserDialogImpl/0.27.1360.741@0.27.1360.741" timestamp="1618284526212" />
-    <state width="1314" height="152" key="GridCell.Tab.0.bottom" timestamp="1618284958933">
+    <state width="1314" height="154" key="GridCell.Tab.0.bottom" timestamp="1618902085811">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="152" key="GridCell.Tab.0.bottom/0.27.1360.741@0.27.1360.741" timestamp="1618284958933" />
-    <state width="1314" height="152" key="GridCell.Tab.0.center" timestamp="1618284958931">
+    <state width="1314" height="154" key="GridCell.Tab.0.bottom/0.27.1360.741@0.27.1360.741" timestamp="1618902085811" />
+    <state width="1314" height="154" key="GridCell.Tab.0.center" timestamp="1618902085810">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="152" key="GridCell.Tab.0.center/0.27.1360.741@0.27.1360.741" timestamp="1618284958931" />
-    <state width="1314" height="152" key="GridCell.Tab.0.left" timestamp="1618284958931">
+    <state width="1314" height="154" key="GridCell.Tab.0.center/0.27.1360.741@0.27.1360.741" timestamp="1618902085810" />
+    <state width="1314" height="154" key="GridCell.Tab.0.left" timestamp="1618902085806">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="152" key="GridCell.Tab.0.left/0.27.1360.741@0.27.1360.741" timestamp="1618284958931" />
-    <state width="1314" height="152" key="GridCell.Tab.0.right" timestamp="1618284958932">
+    <state width="1314" height="154" key="GridCell.Tab.0.left/0.27.1360.741@0.27.1360.741" timestamp="1618902085806" />
+    <state width="1314" height="154" key="GridCell.Tab.0.right" timestamp="1618902085811">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="152" key="GridCell.Tab.0.right/0.27.1360.741@0.27.1360.741" timestamp="1618284958932" />
-    <state width="1314" height="206" key="GridCell.Tab.1.bottom" timestamp="1618005812566">
+    <state width="1314" height="154" key="GridCell.Tab.0.right/0.27.1360.741@0.27.1360.741" timestamp="1618902085811" />
+    <state width="1314" height="209" key="GridCell.Tab.1.bottom" timestamp="1618613650450">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="206" key="GridCell.Tab.1.bottom/0.27.1360.741@0.27.1360.741" timestamp="1618005812566" />
-    <state width="1314" height="206" key="GridCell.Tab.1.center" timestamp="1618005812561">
+    <state width="1314" height="209" key="GridCell.Tab.1.bottom/0.27.1360.741@0.27.1360.741" timestamp="1618613650450" />
+    <state width="1314" height="209" key="GridCell.Tab.1.center" timestamp="1618613650447">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="206" key="GridCell.Tab.1.center/0.27.1360.741@0.27.1360.741" timestamp="1618005812561" />
-    <state width="1314" height="206" key="GridCell.Tab.1.left" timestamp="1618005812560">
+    <state width="1314" height="209" key="GridCell.Tab.1.center/0.27.1360.741@0.27.1360.741" timestamp="1618613650447" />
+    <state width="1314" height="209" key="GridCell.Tab.1.left" timestamp="1618613650447">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="206" key="GridCell.Tab.1.left/0.27.1360.741@0.27.1360.741" timestamp="1618005812560" />
-    <state width="1314" height="206" key="GridCell.Tab.1.right" timestamp="1618005812563">
+    <state width="1314" height="209" key="GridCell.Tab.1.left/0.27.1360.741@0.27.1360.741" timestamp="1618613650447" />
+    <state width="1314" height="209" key="GridCell.Tab.1.right" timestamp="1618613650449">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state width="1314" height="206" key="GridCell.Tab.1.right/0.27.1360.741@0.27.1360.741" timestamp="1618005812563" />
+    <state width="1314" height="209" key="GridCell.Tab.1.right/0.27.1360.741@0.27.1360.741" timestamp="1618613650449" />
     <state x="263" y="134" width="824" height="526" key="IDE.errors.dialog" timestamp="1617134141678">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
     <state x="263" y="134" width="824" height="526" key="IDE.errors.dialog/0.27.1360.741@0.27.1360.741" timestamp="1617134141678" />
-    <state x="67" y="38" key="SettingsEditor" timestamp="1618006556542">
+    <state x="85" y="27" width="1123" height="729" key="SettingsEditor" timestamp="1618609128979">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
-    <state x="67" y="38" key="SettingsEditor/0.27.1360.741@0.27.1360.741" timestamp="1618006556542" />
+    <state x="85" y="27" width="1123" height="729" key="SettingsEditor/0.27.1360.741@0.27.1360.741" timestamp="1618609128979" />
     <state x="243" y="149" width="672" height="678" key="search.everywhere.popup" timestamp="1617758943391">
       <screen x="0" y="27" width="1360" height="741" />
     </state>
@@ -378,5 +388,16 @@
       <screen x="0" y="27" width="1360" height="741" />
     </state>
     <state x="405" y="281" width="540" height="232" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.27.1360.741@0.27.1360.741" timestamp="1617707878529" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -12,12 +12,13 @@ class WeatherBit:
         api_weatherbit = self.requests.get(f"https://api.weatherbit.io/v2.0/current?lat={self.LATITUDE}&lon={self.LONGITUDE}&key={self.API_KEY_WEATHERBIT}").json()
         wbit_humidity = api_weatherbit["data"][0]["rh"]
         wbit_Temperature = api_weatherbit["data"][0]["temp"]
-        print(f"WeatherBit:      humidity {wbit_humidity}   Temperature {wbit_Temperature}")
+        # # print(f"WeatherBit:      humidity {wbit_humidity}   Temperature {wbit_Temperature}")
+        return wbit_humidity, wbit_Temperature
 
 
     def __get_api_weatherbit_data(self, api_weatherbit_data, t:str):
         date, temp, humidity, weather = list(), list(), list(), list()
-        for d in api_weatherbit_data:
+        for d in api_weatherbit_data[3:]:
             date.append(str(self.datetime.datetime.fromisoformat(d[t])))
             temp.append(d["temp"])
             humidity.append(d["rh"])
@@ -31,8 +32,8 @@ class WeatherBit:
 
         date, temp, humidity, weather = self.__get_api_weatherbit_data(api_weatherbit_hourly_data, "timestamp_utc")
         api_weatherbit_hourly_data_filtered = {"date": date, "temp": temp, "humidity": humidity, "weather": weather}
-        print("WeatherBit - 48 hour", "\n")
-        [[print(f"Hour {i+1}"),print("date :", api_weatherbit_hourly_data_filtered["date"][i]), print("temp :", api_weatherbit_hourly_data_filtered["temp"][i]), print("humidity :", api_weatherbit_hourly_data_filtered["humidity"][i]), print("weather :", api_weatherbit_hourly_data_filtered["weather"][i]),print("\n")] for i in range(len(api_weatherbit_hourly_data_filtered["date"]))]
+        # print("WeatherBit - 48 hour", "\n")
+        # [[print(f"Hour {i+1}"),print("date :", api_weatherbit_hourly_data_filtered["date"][i]), print("temp :", api_weatherbit_hourly_data_filtered["temp"][i]), print("humidity :", api_weatherbit_hourly_data_filtered["humidity"][i]), print("weather :", api_weatherbit_hourly_data_filtered["weather"][i]),print("\n")] for i in range(len(api_weatherbit_hourly_data_filtered["date"]))]
         return api_weatherbit_hourly_data_filtered
 
     def get_daily_data(self):
@@ -41,9 +42,9 @@ class WeatherBit:
 
         date, temp, humidity, weather = self.__get_api_weatherbit_data(api_weatherbit_daily_data, "datetime")
         api_weatherbit_daily_data_filtered = {"date": date, "temp": temp, "humidity": humidity, "weather": weather}
-        print("WeatherBit - 8 day", "\n")
-        [[print(f"Day {i+1}"),print("date :", api_weatherbit_daily_data_filtered["date"][i]), print("temp :", api_weatherbit_daily_data_filtered["temp"][i]), print("weather :", api_weatherbit_daily_data_filtered["weather"][i]),print("\n")] for i in range(len(api_weatherbit_daily_data_filtered["date"]))]
-
+        # print("WeatherBit - 8 day", "\n")
+        # [[print(f"Day {i+1}"),print("date :", api_weatherbit_daily_data_filtered["date"][i]), print("temp :", api_weatherbit_daily_data_filtered["temp"][i]), print("weather :", api_weatherbit_daily_data_filtered["weather"][i]),print("\n")] for i in range(len(api_weatherbit_daily_data_filtered["date"]))]
+        return api_weatherbit_daily_data_filtered
 
 
 class OpenWeatherMap:
@@ -60,7 +61,8 @@ class OpenWeatherMap:
         api_owm = self.requests.get(f'http://api.openweathermap.org/data/2.5/weather?id=614455&appid={self.API_KEY_OWM}&units=metric').json()
         owm_humidity = api_owm["main"]["humidity"]
         owm_Temperature = api_owm["main"]['temp']
-        print(f"OpenWeatherMap:   humidity {owm_humidity}     Temperature {owm_Temperature}")
+        # print(f"OpenWeatherMap:   humidity {owm_humidity}     Temperature {owm_Temperature}")
+        return owm_humidity, owm_Temperature
 
 
     def __get_api_owm_data(self, api_owm_data):
@@ -79,8 +81,8 @@ class OpenWeatherMap:
 
         date, temp, humidity, weather = self.__get_api_owm_data(api_owm_hourly_data)
         api_owm_hourly_data_filtered = {"date": date, "temp": temp, "humidity": humidity, "weather": weather}
-        print("OpenWeatherMap 48 hour", "\n")
-        [[print(f"Hour {i+1}"),print("date :", api_owm_hourly_data_filtered["date"][i]), print("temp :", api_owm_hourly_data_filtered["temp"][i]), print("humidity :", api_owm_hourly_data_filtered["humidity"][i]), print("weather :", api_owm_hourly_data_filtered["weather"][i]),print("\n")] for i in range(len(api_owm_hourly_data_filtered["date"]))]
+        # print("OpenWeatherMap 48 hour", "\n")
+        # [[print(f"Hour {i+1}"),print("date :", api_owm_hourly_data_filtered["date"][i]), print("temp :", api_owm_hourly_data_filtered["temp"][i]), print("humidity :", api_owm_hourly_data_filtered["humidity"][i]), print("weather :", api_owm_hourly_data_filtered["weather"][i]),print("\n")] for i in range(len(api_owm_hourly_data_filtered["date"]))]
         return api_owm_hourly_data_filtered
 
     def get_daily_data(self):
@@ -88,7 +90,7 @@ class OpenWeatherMap:
         api_owm_daily_data = api_owm_daily["daily"]
 
         date, temp, humidity, weather = self.__get_api_owm_data(api_owm_daily_data)
-        api_owm_daily_data_filtered = {"date": date, "temp": temp, "humidity": humidity, "weather": weather}
-        print("OpenWeatherMap - 8 day", "\n")
-        [[print(f"Day {i+1}"),print("date :", api_owm_daily_data_filtered["date"][i]), print("temp :", api_owm_daily_data_filtered["temp"][i]), print("humidity :", api_owm_daily_data_filtered["humidity"][i]), print("weather :", api_owm_daily_data_filtered["weather"][i]),print("\n")] for i in range(len(api_owm_daily_data_filtered["date"]))]
-
+        api_owm_daily_data_filtered = {"date": date, "temp": [t['morn'] for t in temp], "humidity": humidity, "weather": weather}
+        # print("OpenWeatherMap - 8 day", "\n")
+        # [[print(f"Day {i+1}"),print("date :", api_owm_daily_data_filtered["date"][i]), print("temp :", api_owm_daily_data_filtered["temp"][i]), print("humidity :", api_owm_daily_data_filtered["humidity"][i]), print("weather :", api_owm_daily_data_filtered["weather"][i]),print("\n")] for i in range(len(api_owm_daily_data_filtered["date"]))]
+        return api_owm_daily_data_filtered

@@ -7,14 +7,29 @@
     <x>0</x>
     <y>0</y>
     <width>590</width>
-    <height>461</height>
+    <height>460</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>590</width>
+    <height>460</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>590</width>
+    <height>460</height>
+   </size>
   </property>
   <property name="font">
    <font>
     <weight>75</weight>
     <bold>true</bold>
    </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
   </property>
   <property name="windowTitle">
    <string>Home</string>
@@ -28,10 +43,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #31CCFE	;
-QMenuBar::hover
-{
-color : #1292BD;
-}</string>
+</string>
   </property>
   <property name="iconSize">
    <size>
@@ -414,6 +426,12 @@ color: white;
       <bold>true</bold>
      </font>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
      <string notr="true">color: white;
 background-color: #00BFFF;
@@ -484,14 +502,20 @@ bad or can not work.
      <height>25</height>
     </rect>
    </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
    <widget class="QMenu" name="menuHome">
     <property name="title">
      <string>Menu</string>
     </property>
     <addaction name="actionHome"/>
+    <addaction name="separator"/>
     <addaction name="actionSensor_Live_Mode"/>
+    <addaction name="separator"/>
     <addaction name="actionWeather_for_Week"/>
     <addaction name="actionHourly_Weather"/>
+    <addaction name="separator"/>
     <addaction name="actionStatistic"/>
    </widget>
    <addaction name="menuHome"/>
