@@ -260,6 +260,11 @@ class Ui_Home(object):
         self.retranslateUi(Home)
         QtCore.QMetaObject.connectSlotsByName(Home)
 
+        self.printn()
+
+    def printn(self):
+        self.About.clicked.connect(lambda:print(11))
+
     def retranslateUi(self, Home):
         _translate = QtCore.QCoreApplication.translate
         Home.setWindowTitle(_translate("Home", "Home"))
@@ -284,7 +289,7 @@ class Ui_Home(object):
         self.actionWeather_for_Week.setText(_translate("Home", "Weather for Week"))
         self.actionHourly_Weather.setText(_translate("Home", "Hourly Weather"))
         self.actionStatistic.setText(_translate("Home", "Statistic"))
-import 1_rc
+# import 1_rc
 
 
 if __name__ == "__main__":

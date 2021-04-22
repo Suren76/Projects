@@ -2,8 +2,10 @@
 # import pyowm
 import requests.packages.urllib3.request
 import datetime
+import time
 # import asyncio
 # import logging
+import sched
 
 LOCATION_ID_ACCUWEATHER = '11586'
 API_KEY_ACCUWEATHER = "CFEvIq8sL9Lq6JoJSQvK0XPpjUeYoX66"
@@ -90,12 +92,10 @@ LONGITUDE = 46.336498654
 #
 #
 # while True:
-#     print(next(d(1)))
-import sched, time
+#    print(next(d(1)))
 s = sched.scheduler(time.time, time.sleep)
-def do_something(sc):
-    def d():
 
-# s.enter(1, 1, do_something, (s,))
-# s.run()
-s.enter(5,1,do_something(s))
+
+
+s.enter(4, 1, print(4), (s,))
+s.run()

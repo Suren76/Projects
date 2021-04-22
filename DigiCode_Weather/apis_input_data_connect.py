@@ -6,11 +6,13 @@ API_KEY_WEATHERBIT = "49592d44067646cc9392739fa1f8602b"
 API_KEY_OWM = "3fd60d0b7b747ee2b82669d7cc84b4e0"
 LATITUDE = 39.504664648
 LONGITUDE = 46.336498654
+SENSOR_PIN = 6
+SENSOR_MODEl = 11
 
 
 def get_weather_current(weatherbit, owm, sensor):
     current_weather = dict()
-    current_weather[str(datetime.now().time())[:5]] = {"weatherbit": weatherbit.get_current_data(), "owm": owm.get_current_data(), "sensor": sensor.get_data()}
+    current_weather[str(datetime.now().time())[:5]] = {"weatherbit": weatherbit.get_current_data(), "OpenWeatherMap": owm.get_current_data(), "Sensor": sensor.get_data()}
     return current_weather
 
 

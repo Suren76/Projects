@@ -59,7 +59,7 @@ class Ui_Adout(object):
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://www.instagram.com/parsyan_066/\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">parsyan_suren@mail.ru</span></a></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://www.instagram.com/parsyan_066/\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">parsyansuren@gmail.com</span></a></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt; font-weight:600; color:#ffffff;\">GitHub</span><a href=\"https://www.instagram.com/parsyan_066/\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">: </span></a><a href=\"https://github.com/Suren76/Projects/tree/main/DigiCode_Weather\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">Suren76</span></a></p></body></html>"))
-        self.label_2.setText(_translate("Adout", "<html><head/><body><p align=\"center\"><span style=\" font-size:26pt; font-weight:600; color:#ffffff;\">About Weather</span></p></body></html>"))
+        self.label_2.setText(_translate("Adout", "<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">About Weather</span></p></body></html>"))
 
 
 if __name__ == "__main__":
