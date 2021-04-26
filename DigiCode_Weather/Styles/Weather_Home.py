@@ -23,7 +23,7 @@ class Ui_Home(object):
         Home.setFont(font)
         Home.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../img/app_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("img/app_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Home.setWindowIcon(icon)
         Home.setAutoFillBackground(False)
         Home.setStyleSheet("background-color: #31CCFE    ;\n"
@@ -212,7 +212,7 @@ class Ui_Home(object):
 "border-bottom-left-radius: 6px;")
         self.About.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../img/2940537-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap("img/2940537-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.About.setIcon(icon1)
         self.About.setIconSize(QtCore.QSize(60, 110))
         self.About.setCheckable(False)
@@ -260,10 +260,11 @@ class Ui_Home(object):
         self.retranslateUi(Home)
         QtCore.QMetaObject.connectSlotsByName(Home)
 
-        self.printn()
+    @QtCore.pyqtSlot()
+    def p(self):
+        self.sender()
+        print(1)
 
-    def printn(self):
-        self.About.clicked.connect(lambda:print(11))
 
     def retranslateUi(self, Home):
         _translate = QtCore.QCoreApplication.translate
@@ -284,7 +285,7 @@ class Ui_Home(object):
 "bad or can not work. \n"
 " You can email me for that."))
         self.menuHome.setTitle(_translate("Home", "Menu"))
-        self.actionHome.setText(_translate("Home", "Home"))
+        self.actionHome.setText(_translate("Home", "Home11"))
         self.actionSensor_Live_Mode.setText(_translate("Home", "Sensor Live Mode"))
         self.actionWeather_for_Week.setText(_translate("Home", "Weather for Week"))
         self.actionHourly_Weather.setText(_translate("Home", "Hourly Weather"))

@@ -30,7 +30,7 @@ class Sensor:
 
     def get_data(self):
         self.__run()
-        return self.__temp, self.__humidity
+        return self.__humidity, self.__temp
 
     def get_data_live(self):
         while True:

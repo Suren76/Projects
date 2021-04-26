@@ -34,3 +34,16 @@ def summarize_statistic(res_dict):
     humidity = humidity/len(humidity)
 
     return temp, humidity
+
+
+def statistic_for_hours_swap(sensor_dict, api_dict):
+
+    res = dict()
+
+    for i in range(len(sensor_dict["date"])):
+        temp = sensor_dict["temp"][i]-api_dict["temp"][i]
+        humidity = sensor_dict["humidity"][i]-api_dict["humidity"][i]
+
+        res[f'{int(api_dict["date"][i].split()[0].split("-")[2])}, {int(api_dict["date"][i].split()[1].split(":")[0])}'] = {"temp": temp, "humidity": humidity}
+
+    return res

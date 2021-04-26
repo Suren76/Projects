@@ -1,4 +1,4 @@
-# from Classes.Weather import OpenWeatherMap, WeatherBit
+from Classes.Weather import OpenWeatherMap, WeatherBit
 # from statistic import statistic, summarize_statistic
 import sched, time
 
@@ -9,11 +9,6 @@ LONGITUDE = 46.336498654
 SENSOR_PIN = 6
 SENSOR_MODEl = 11
 
-
-def get_weather_current(weatherbit, owm, sensor):
-    current_weather = dict()
-    current_weather[str(datetime.now().time())[:5]] = {"weatherbit": weatherbit.get_current_data(), "OpenWeatherMap": owm.get_current_data(), "Sensor": sensor.get_data()}
-    return current_weather
 
 
 
@@ -27,9 +22,9 @@ def get_weather_current(weatherbit, owm, sensor):
 
 # #######################################  tests  #################################################################
 
-# wbet = WeatherBit(API_KEY_WEATHERBIT, LATITUDE, LONGITUDE)
+wbet = WeatherBit(API_KEY_WEATHERBIT, LATITUDE, LONGITUDE)
 # print(wbet.get_current_data())
-# print(wbet.get_hourly_data())
+print(wbet.get_hourly_data())
 # print(wbet.get_daily_data())
 
 # owm = OpenWeatherMap(API_KEY_OWM, LATITUDE, LONGITUDE)
