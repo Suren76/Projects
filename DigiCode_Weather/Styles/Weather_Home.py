@@ -113,7 +113,7 @@ class Ui_Home(object):
         self.WeatherBit_data_humidity = QtWidgets.QLabel(self.centralwidget)
         self.WeatherBit_data_humidity.setGeometry(QtCore.QRect(480, 150, 75, 60))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setUnderline(False)
@@ -143,7 +143,7 @@ class Ui_Home(object):
         self.OWM_data_humidity = QtWidgets.QLabel(self.centralwidget)
         self.OWM_data_humidity.setGeometry(QtCore.QRect(480, 350, 75, 60))
         font = QtGui.QFont()
-        font.setPointSize(30)
+        font.setPointSize(20)
         font.setBold(True)
         font.setItalic(False)
         font.setUnderline(False)
@@ -260,11 +260,6 @@ class Ui_Home(object):
         self.retranslateUi(Home)
         QtCore.QMetaObject.connectSlotsByName(Home)
 
-    @QtCore.pyqtSlot()
-    def p(self):
-        self.sender()
-        print(1)
-
 
     def retranslateUi(self, Home):
         _translate = QtCore.QCoreApplication.translate
@@ -285,7 +280,7 @@ class Ui_Home(object):
 "bad or can not work. \n"
 " You can email me for that."))
         self.menuHome.setTitle(_translate("Home", "Menu"))
-        self.actionHome.setText(_translate("Home", "Home11"))
+        self.actionHome.setText(_translate("Home", "Home"))
         self.actionSensor_Live_Mode.setText(_translate("Home", "Sensor Live Mode"))
         self.actionWeather_for_Week.setText(_translate("Home", "Weather for Week"))
         self.actionHourly_Weather.setText(_translate("Home", "Hourly Weather"))
@@ -293,11 +288,3 @@ class Ui_Home(object):
 # import 1_rc
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Home = QtWidgets.QMainWindow()
-    ui = Ui_Home()
-    ui.setupUi(Home)
-    Home.show()
-    sys.exit(app.exec_())

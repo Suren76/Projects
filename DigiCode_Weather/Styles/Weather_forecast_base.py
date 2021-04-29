@@ -12,26 +12,30 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_forecast_base(object):
+    def __init__(self, t):
+        self.t = t
+
     def setupUi(self, forecast_base):
-        forecast_base.setObjectName("forecast_base")
+        forecast_base.setObjectName(str(self.t))
         forecast_base.resize(625, 545)
         forecast_base.setMinimumSize(QtCore.QSize(625, 545))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../img/app_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("img/app_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         forecast_base.setWindowIcon(icon)
         forecast_base.setStyleSheet("background-color: #31CCFE    ;\n"
-"QScrollArea{\n"
-"background-color :rgb(255, 69, 0);\n"
-"border: 2px solid #FEFEFE;\n"
-"}")
+                                    "QScrollArea{\n"
+                                    "background-color :rgb(255, 69, 0);\n"
+                                    "border: 2px solid #FEFEFE;\n"
+                                    "}")
         self.centralwidget = QtWidgets.QWidget(forecast_base)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName("verticalLayout")
+        ################################################################################################################
         self.scrollArea_OWM = QtWidgets.QScrollArea(self.centralwidget)
         self.scrollArea_OWM.setAccessibleDescription("")
         self.scrollArea_OWM.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"")
+                                          "")
         self.scrollArea_OWM.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.scrollArea_OWM.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
         self.scrollArea_OWM.setWidgetResizable(True)
@@ -43,6 +47,43 @@ class Ui_forecast_base(object):
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents_OWM)
         self.horizontalLayout_3.setContentsMargins(-1, -1, -1, 9)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        ################################################################################################################
+        # self.test1 = self.frame_base_owm()
+        # self.test2 = self.frame_base_owm()
+        # self.test3 = self.frame_base_owm()
+        # self.test4 = self.frame_base_owm()
+        # self.test5 = self.frame_base_owm()
+        ################################################################################################################
+        self.scrollArea_WeatherBit = QtWidgets.QScrollArea(self.centralwidget)
+        self.scrollArea_WeatherBit.setStyleSheet("background-color :rgb(255, 69, 0);\n"
+                                                 "")
+        self.scrollArea_WeatherBit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.scrollArea_WeatherBit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.scrollArea_WeatherBit.setWidgetResizable(True)
+        self.scrollArea_WeatherBit.setAlignment(QtCore.Qt.AlignCenter)
+        self.scrollArea_WeatherBit.setObjectName("scrollArea_WeatherBit")
+        self.scrollAreaWidgetContents_WeatherBit = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents_WeatherBit.setGeometry(QtCore.QRect(0, 0, 605, 258))
+        self.scrollAreaWidgetContents_WeatherBit.setObjectName("scrollAreaWidgetContents_WeatherBit")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents_WeatherBit)
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        ################################################################################################################
+        # self.test6 = self.frame_base_wbit()
+        # self.test7 = self.frame_base_wbit()
+        # self.test8 = self.frame_base_wbit()
+        # self.test9 = self.frame_base_wbit()
+        # self.test10 = self.frame_base_wbit()
+        ################################################################################################################
+        forecast_base.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(forecast_base)
+        QtCore.QMetaObject.connectSlotsByName(forecast_base)
+
+    def retranslateUi(self, forecast_base):
+        _translate = QtCore.QCoreApplication.translate
+        forecast_base.setWindowTitle(_translate("forecast_base", str(self.t)))
+
+    def frame_base_owm(self, temp, weather, humidity, date):
         self.frame_OWM = QtWidgets.QFrame(self.scrollAreaWidgetContents_OWM)
         self.frame_OWM.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Ignored)
@@ -53,11 +94,11 @@ class Ui_forecast_base(object):
         self.frame_OWM.setMinimumSize(QtCore.QSize(150, 240))
         self.frame_OWM.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.frame_OWM.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color: white;\n"
-"border-radius: 15px;\n"
-"border: 6px solid #FEFEFE;\n"
-"background-color :rgb(255, 69, 0);\n"
-"")
+                                     "color: white;\n"
+                                     "border-radius: 15px;\n"
+                                     "border: 6px solid #FEFEFE;\n"
+                                     "background-color :rgb(255, 69, 0);\n"
+                                     "")
         self.frame_OWM.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_OWM.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_OWM.setObjectName("frame_OWM")
@@ -72,8 +113,8 @@ class Ui_forecast_base(object):
         self.OWM_data_temp.setFont(font)
         self.OWM_data_temp.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.OWM_data_temp.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color: white;\n"
-"border: none;")
+                                         "color: white;\n"
+                                         "border: none;")
         self.OWM_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.OWM_data_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.OWM_data_temp.setWordWrap(False)
@@ -88,8 +129,8 @@ class Ui_forecast_base(object):
         self.OWM_data_weather.setFont(font)
         self.OWM_data_weather.setTabletTracking(False)
         self.OWM_data_weather.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color:white;\n"
-"border: none;")
+                                            "color:white;\n"
+                                            "border: none;")
         self.OWM_data_weather.setAlignment(QtCore.Qt.AlignCenter)
         self.OWM_data_weather.setObjectName("OWM_data_weather")
         self.horizontalLayout_OWM.addWidget(self.OWM_data_weather)
@@ -105,8 +146,8 @@ class Ui_forecast_base(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.OWM_data_humidity.setFont(font)
         self.OWM_data_humidity.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color:white;\n"
-"border: none;")
+                                             "color:white;\n"
+                                             "border: none;")
         self.OWM_data_humidity.setAlignment(QtCore.Qt.AlignCenter)
         self.OWM_data_humidity.setObjectName("OWM_data_humidity")
         self.horizontalLayout_OWM.addWidget(self.OWM_data_humidity)
@@ -114,27 +155,22 @@ class Ui_forecast_base(object):
         self.OWM_data_date = QtWidgets.QLabel(self.frame_OWM)
         self.OWM_data_date.setMinimumSize(QtCore.QSize(110, 20))
         self.OWM_data_date.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color:white;\n"
-"border: none;")
+                                         "color:white;\n"
+                                         "border: none;")
         self.OWM_data_date.setAlignment(QtCore.Qt.AlignCenter)
         self.OWM_data_date.setObjectName("OWM_data_date")
+
+        self.OWM_data_temp.setText(str(temp))
+        self.OWM_data_weather.setText(str(weather))
+        self.OWM_data_humidity.setText(str(humidity))
+        self.OWM_data_date.setText(str(date))
+
         self.verticalLayout_6.addWidget(self.OWM_data_date)
         self.horizontalLayout_3.addWidget(self.frame_OWM)
         self.scrollArea_OWM.setWidget(self.scrollAreaWidgetContents_OWM)
         self.verticalLayout.addWidget(self.scrollArea_OWM)
-        self.scrollArea_WeatherBit = QtWidgets.QScrollArea(self.centralwidget)
-        self.scrollArea_WeatherBit.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"")
-        self.scrollArea_WeatherBit.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
-        self.scrollArea_WeatherBit.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
-        self.scrollArea_WeatherBit.setWidgetResizable(True)
-        self.scrollArea_WeatherBit.setAlignment(QtCore.Qt.AlignCenter)
-        self.scrollArea_WeatherBit.setObjectName("scrollArea_WeatherBit")
-        self.scrollAreaWidgetContents_WeatherBit = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_WeatherBit.setGeometry(QtCore.QRect(0, 0, 605, 258))
-        self.scrollAreaWidgetContents_WeatherBit.setObjectName("scrollAreaWidgetContents_WeatherBit")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.scrollAreaWidgetContents_WeatherBit)
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+
+    def frame_base_wbit(self, temp, weather, humidity, date):
         self.frame_WeatherBit = QtWidgets.QFrame(self.scrollAreaWidgetContents_WeatherBit)
         self.frame_WeatherBit.setEnabled(True)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Ignored)
@@ -145,11 +181,11 @@ class Ui_forecast_base(object):
         self.frame_WeatherBit.setMinimumSize(QtCore.QSize(150, 240))
         self.frame_WeatherBit.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.frame_WeatherBit.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color: white;\n"
-"border-radius: 15px;\n"
-"border: 6px solid #FEFEFE;\n"
-"background-color :rgb(255, 69, 0);\n"
-"")
+                                            "color: white;\n"
+                                            "border-radius: 15px;\n"
+                                            "border: 6px solid #FEFEFE;\n"
+                                            "background-color :rgb(255, 69, 0);\n"
+                                            "")
         self.frame_WeatherBit.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_WeatherBit.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_WeatherBit.setObjectName("frame_WeatherBit")
@@ -164,8 +200,8 @@ class Ui_forecast_base(object):
         self.WeatherBit_data_temp.setFont(font)
         self.WeatherBit_data_temp.setLayoutDirection(QtCore.Qt.LeftToRight)
         self.WeatherBit_data_temp.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color: white;\n"
-"border: none;")
+                                                "color: white;\n"
+                                                "border: none;")
         self.WeatherBit_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.WeatherBit_data_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.WeatherBit_data_temp.setWordWrap(False)
@@ -180,8 +216,8 @@ class Ui_forecast_base(object):
         self.WeatherBit_data_weather.setFont(font)
         self.WeatherBit_data_weather.setTabletTracking(False)
         self.WeatherBit_data_weather.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color:white;\n"
-"border: none;")
+                                                   "color:white;\n"
+                                                   "border: none;")
         self.WeatherBit_data_weather.setAlignment(QtCore.Qt.AlignCenter)
         self.WeatherBit_data_weather.setObjectName("WeatherBit_data_weather")
         self.horizontalLayout_WeatherBit.addWidget(self.WeatherBit_data_weather)
@@ -197,8 +233,8 @@ class Ui_forecast_base(object):
         font.setStyleStrategy(QtGui.QFont.PreferDefault)
         self.WeatherBit_data_humidity.setFont(font)
         self.WeatherBit_data_humidity.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color:white;\n"
-"border: none;")
+                                                    "color:white;\n"
+                                                    "border: none;")
         self.WeatherBit_data_humidity.setAlignment(QtCore.Qt.AlignCenter)
         self.WeatherBit_data_humidity.setObjectName("WeatherBit_data_humidity")
         self.horizontalLayout_WeatherBit.addWidget(self.WeatherBit_data_humidity)
@@ -206,37 +242,17 @@ class Ui_forecast_base(object):
         self.WeatherBit_data_date = QtWidgets.QLabel(self.frame_WeatherBit)
         self.WeatherBit_data_date.setMinimumSize(QtCore.QSize(110, 20))
         self.WeatherBit_data_date.setStyleSheet("background-color :rgb(255, 69, 0);\n"
-"color:white;\n"
-"border: none;")
+                                                "color:white;\n"
+                                                "border: none;")
         self.WeatherBit_data_date.setAlignment(QtCore.Qt.AlignCenter)
         self.WeatherBit_data_date.setObjectName("WeatherBit_data_date")
+
+        self.WeatherBit_data_temp.setText(str(temp))
+        self.WeatherBit_data_weather.setText(str(weather))
+        self.WeatherBit_data_humidity.setText(str(humidity))
+        self.WeatherBit_data_date.setText(str(date))
+
         self.verticalLayout_7.addWidget(self.WeatherBit_data_date)
         self.horizontalLayout_4.addWidget(self.frame_WeatherBit)
         self.scrollArea_WeatherBit.setWidget(self.scrollAreaWidgetContents_WeatherBit)
         self.verticalLayout.addWidget(self.scrollArea_WeatherBit)
-        forecast_base.setCentralWidget(self.centralwidget)
-
-        self.retranslateUi(forecast_base)
-        QtCore.QMetaObject.connectSlotsByName(forecast_base)
-
-    def retranslateUi(self, forecast_base):
-        _translate = QtCore.QCoreApplication.translate
-        forecast_base.setWindowTitle(_translate("forecast_base", "forecast_base"))
-        self.OWM_data_temp.setText(_translate("forecast_base", "t"))
-        self.OWM_data_weather.setText(_translate("forecast_base", "weather "))
-        self.OWM_data_humidity.setText(_translate("forecast_base", "h"))
-        self.OWM_data_date.setText(_translate("forecast_base", "dd:mm:yyyy"))
-        self.WeatherBit_data_temp.setText(_translate("forecast_base", "t"))
-        self.WeatherBit_data_weather.setText(_translate("forecast_base", "weather "))
-        self.WeatherBit_data_humidity.setText(_translate("forecast_base", "h"))
-        self.WeatherBit_data_date.setText(_translate("forecast_base", "dd:mm:yyyy"))
-
-
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    forecast_base = QtWidgets.QMainWindow()
-    ui = Ui_forecast_base()
-    ui.setupUi(forecast_base)
-    forecast_base.show()
-    sys.exit(app.exec_())

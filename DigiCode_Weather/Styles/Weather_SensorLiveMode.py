@@ -18,7 +18,7 @@ class Ui_SensorLiveMode(object):
         SensorLiveMode.setMinimumSize(QtCore.QSize(320, 320))
         SensorLiveMode.setMaximumSize(QtCore.QSize(320, 320))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../img/app_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("img/app_icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         SensorLiveMode.setWindowIcon(icon)
         SensorLiveMode.setStyleSheet("background-color: #31CCFE    ;\n"
 "")
@@ -90,7 +90,7 @@ class Ui_SensorLiveMode(object):
         self.about_localdata.setText(_translate("SensorLiveMode", "Weather get from  \n"
 "     local sensor"))
         self.Sensor_data_humidity.setText(_translate("SensorLiveMode", "h"))
-import 1_rc
+# import 1_rc
 
 
 if __name__ == "__main__":

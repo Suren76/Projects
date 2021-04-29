@@ -9,10 +9,10 @@
 # from get_current_data import get_sensor_current_data
 
 
-# from Classes.Weather import OpenWeatherMap, WeatherBit
+from Classes.Weather import OpenWeatherMap, WeatherBit
 # # from Classes.Sensor import Sensor
 # from statistic import statistic_for_hours, summarize_statistic
-# from apis_input_data_connect import *
+from apis_input_data_connect import *
 # from time import sleep
 from datetime import datetime
 # from multiprocessing import Process
@@ -21,8 +21,8 @@ import os
 import platform
 
 
-# wbet: WeatherBit = WeatherBit(API_KEY_WEATHERBIT, LATITUDE, LONGITUDE)
-# owm: OpenWeatherMap = OpenWeatherMap(API_KEY_OWM, LATITUDE, LONGITUDE)
+wbet: WeatherBit = WeatherBit(API_KEY_WEATHERBIT, LATITUDE, LONGITUDE)
+owm: OpenWeatherMap = OpenWeatherMap(API_KEY_OWM, LATITUDE, LONGITUDE)
 # sensor_dht: Sensor = Sensor(SENSOR_PIN, SENSOR_MODEl)
 
 
@@ -125,6 +125,17 @@ import platform
 
 # print(1)
 
+
+
+# s = sched.scheduler(time.time, time.sleep)
+# def do_something(sc):
+#     s.enter(60, 1, do_something, (sc,))
+#
+# s.enter(60, 1, do_something, (s,))
+# s.run()
+#
+
+
 # def myFunc():
 #     f = open('file.txt', 'r+')
 #     while True:
@@ -193,21 +204,21 @@ import platform
 # if __name__ == "__main__":
 
 #     print(get_sensor_current_data())
-do = input()
-if do == "1":
-    if platform.system() == "Windows":
-        os.system("start /min  cmd /k python 1.py")
-    if platform.system() == "Linux":
-        os.system("python get_current_data.py &")
-    # get_sensor_current_data()
-    while True:
-        f = input("0 - print data"
-                  "\nq - quit\n")
-        if f == "0":
-            fl = open("sensor_data.json", "r+")
-            print(fl.read())
-        if f == "q":
-            quit()
+# do = input()
+# if do == "1":
+#     if platform.system() == "Windows":
+#         os.system("start /min  cmd /k python test_current_data_save.py")
+#     if platform.system() == "Linux":
+#         os.system("python get_current_data.py &")
+#     # get_sensor_current_data()
+#     while True:
+#         f = input("0 - print data"
+#                   "\nq - quit\n")
+#         if f == "0":
+#             fl = open("sensor_data.json", "r+")
+#             print(fl.read())
+#         if f == "q":
+#             break
 
 # b = {"data":datetime.month(), "time":datetime.now().time()}
 # , {"data": str(datetime.month()), "time": str(datetime.now().time())}]
@@ -215,12 +226,16 @@ if do == "1":
 # l.append(open("sensor_data.json", "r+").read())
 import time
 import json
-time.sleep(3)
 # print((type(open("sensor_data.json", "r+").read())))
 
 # with open('sensor_data.json') as json_file:
 #     data = json.load(json_file)
 #     print(data, type(data))
 
-js_f = json.load(open("sensor_data.json"))
-print(js_f, type(js_f))
+f = json.load(open("sensor_data.json"))
+#print(f, type(f))
+#print(wbet.get_hourly_data())
+#print(owm.get_hourly_data())
+
+for i in f:
+    print(i)

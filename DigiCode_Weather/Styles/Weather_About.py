@@ -11,17 +11,17 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_Adout(object):
-    def setupUi(self, Adout):
-        Adout.setObjectName("Adout")
-        Adout.resize(360, 360)
-        Adout.setMinimumSize(QtCore.QSize(360, 360))
-        Adout.setMaximumSize(QtCore.QSize(360, 360))
+class Ui_About(object):
+    def setupUi(self, About):
+        About.setObjectName("About")
+        About.resize(360, 360)
+        About.setMinimumSize(QtCore.QSize(360, 360))
+        About.setMaximumSize(QtCore.QSize(360, 360))
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../img/2940537-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        Adout.setWindowIcon(icon)
-        Adout.setStyleSheet("background-color: #31CCFE;")
-        self.centralwidget = QtWidgets.QWidget(Adout)
+        icon.addPixmap(QtGui.QPixmap("img/2940537-200.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        About.setWindowIcon(icon)
+        About.setStyleSheet("background-color: #31CCFE;")
+        self.centralwidget = QtWidgets.QWidget(About)
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(10, 70, 341, 281))
@@ -40,15 +40,15 @@ class Ui_Adout(object):
 "border-radius:23px;\n"
 "")
         self.label_2.setObjectName("label_2")
-        Adout.setCentralWidget(self.centralwidget)
+        About.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(Adout)
-        QtCore.QMetaObject.connectSlotsByName(Adout)
+        self.retranslateUi(About)
+        QtCore.QMetaObject.connectSlotsByName(About)
 
-    def retranslateUi(self, Adout):
+    def retranslateUi(self, About):
         _translate = QtCore.QCoreApplication.translate
-        Adout.setWindowTitle(_translate("Adout", "About"))
-        self.label.setText(_translate("Adout", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+        About.setWindowTitle(_translate("About", "About"))
+        self.label.setText(_translate("About", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Cantarell\'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
@@ -59,14 +59,7 @@ class Ui_Adout(object):
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://www.instagram.com/parsyan_066/\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">parsyan_suren@mail.ru</span></a></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><a href=\"https://www.instagram.com/parsyan_066/\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">parsyansuren@gmail.com</span></a></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:16pt; font-weight:600; color:#ffffff;\">GitHub</span><a href=\"https://www.instagram.com/parsyan_066/\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">: </span></a><a href=\"https://github.com/Suren76/Projects/tree/main/DigiCode_Weather\"><span style=\" font-size:16pt; font-weight:600; text-decoration: underline; color:#ffffff;\">Suren76</span></a></p></body></html>"))
-        self.label_2.setText(_translate("Adout", "<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">About Weather</span></p></body></html>"))
+        self.label_2.setText(_translate("About", "<html><head/><body><p align=\"center\"><span style=\" font-size:22pt; font-weight:600; color:#ffffff;\">About Weather</span></p></body></html>"))
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Adout = QtWidgets.QMainWindow()
-    ui = Ui_Adout()
-    ui.setupUi(Adout)
-    Adout.show()
-    sys.exit(app.exec_())
+
