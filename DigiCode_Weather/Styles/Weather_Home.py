@@ -53,7 +53,7 @@ class Ui_Home(object):
         self.Sensor_data_temp.setStyleSheet("background-color: #00BFFF;\n"
 "color: white;\n"
 "")
-        self.Sensor_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.Sensor_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.Sensor_data_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.Sensor_data_temp.setObjectName("Sensor_data_temp")
         self.Sensor_data_humidity = QtWidgets.QLabel(self.centralwidget)
@@ -106,7 +106,7 @@ class Ui_Home(object):
         self.WeatherBit_data_temp.setStyleSheet("background-color :rgb(255, 69, 0);\n"
 "color: white;\n"
 "")
-        self.WeatherBit_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.WeatherBit_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.WeatherBit_data_temp.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.WeatherBit_data_temp.setWordWrap(False)
         self.WeatherBit_data_temp.setObjectName("WeatherBit_data_temp")
@@ -136,7 +136,7 @@ class Ui_Home(object):
         self.OWM_data_temp.setStyleSheet("background-color :rgb(255, 69, 0);\n"
 "color: white;\n"
 "")
-        self.OWM_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.OWM_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.OWM_data_temp.setAlignment(QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
         self.OWM_data_temp.setWordWrap(False)
         self.OWM_data_temp.setObjectName("OWM_data_temp")

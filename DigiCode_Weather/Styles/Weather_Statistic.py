@@ -250,7 +250,7 @@ class Ui_Statistic(object):
         self.SensorData_data_temp.setStyleSheet("background-color :#31CCFE    ;\n"
                                                 "color: white;\n"
                                                 "border: none;")
-        self.SensorData_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.SensorData_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.SensorData_data_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.SensorData_data_temp.setWordWrap(False)
         self.SensorData_data_temp.setObjectName("SensorData_data_temp")
@@ -322,7 +322,7 @@ class Ui_Statistic(object):
         self.WeatherBit_data_temp_cds.setStyleSheet("background-color :rgb(255, 69, 0);\n"
                                                     "color: white;\n"
                                                     "border: none;")
-        self.WeatherBit_data_temp_cds.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.WeatherBit_data_temp_cds.setTextFormat(QtCore.Qt.MarkdownText)
         self.WeatherBit_data_temp_cds.setAlignment(QtCore.Qt.AlignCenter)
         self.WeatherBit_data_temp_cds.setWordWrap(False)
         self.WeatherBit_data_temp_cds.setObjectName("WeatherBit_data_temp_cds")
@@ -394,7 +394,7 @@ class Ui_Statistic(object):
         self.OWM_data_temp_cds.setStyleSheet("background-color :rgb(255, 69, 0);\n"
                                              "color: white;\n"
                                              "border: none;")
-        self.OWM_data_temp_cds.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.OWM_data_temp_cds.setTextFormat(QtCore.Qt.MarkdownText)
         self.OWM_data_temp_cds.setAlignment(QtCore.Qt.AlignCenter)
         self.OWM_data_temp_cds.setWordWrap(False)
         self.OWM_data_temp_cds.setObjectName("OWM_data_temp_cds")
@@ -466,7 +466,7 @@ class Ui_Statistic(object):
         self.OWM_data_temp_sdds.setStyleSheet("background-color :rgb(255, 69, 0);\n"
                                               "color: white;\n"
                                               "border: none;")
-        self.OWM_data_temp_sdds.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.OWM_data_temp_sdds.setTextFormat(QtCore.Qt.MarkdownText)
         self.OWM_data_temp_sdds.setAlignment(QtCore.Qt.AlignCenter)
         self.OWM_data_temp_sdds.setWordWrap(False)
         self.OWM_data_temp_sdds.setObjectName("OWM_data_temp_sdds")
@@ -538,7 +538,7 @@ class Ui_Statistic(object):
         self.WeatherBit_data_temp_sdds.setStyleSheet("background-color :rgb(255, 69, 0);\n"
                                                      "color: white;\n"
                                                      "border: none;")
-        self.WeatherBit_data_temp_sdds.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.WeatherBit_data_temp_sdds.setTextFormat(QtCore.Qt.MarkdownText)
         self.WeatherBit_data_temp_sdds.setAlignment(QtCore.Qt.AlignCenter)
         self.WeatherBit_data_temp_sdds.setWordWrap(False)
         self.WeatherBit_data_temp_sdds.setObjectName("WeatherBit_data_temp_sdds")

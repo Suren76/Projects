@@ -10,7 +10,7 @@
 
 
 from Classes.Weather import OpenWeatherMap, WeatherBit
-# # from Classes.Sensor import Sensor
+from Classes.Sensor import Sensor
 # from statistic import statistic_for_hours, summarize_statistic
 from apis_input_data_connect import *
 # from time import sleep
@@ -23,7 +23,7 @@ import platform
 
 wbet: WeatherBit = WeatherBit(API_KEY_WEATHERBIT, LATITUDE, LONGITUDE)
 owm: OpenWeatherMap = OpenWeatherMap(API_KEY_OWM, LATITUDE, LONGITUDE)
-# sensor_dht: Sensor = Sensor(SENSOR_PIN, SENSOR_MODEl)
+sensor_dht: Sensor = Sensor(SENSOR_PIN, SENSOR_MODEl)
 
 
 # from accuweather import (
@@ -236,6 +236,5 @@ f = json.load(open("sensor_data.json"))
 #print(f, type(f))
 #print(wbet.get_hourly_data())
 #print(owm.get_hourly_data())
-
-for i in f:
-    print(i)
+while True:
+    print(sensor_dht.get_data())

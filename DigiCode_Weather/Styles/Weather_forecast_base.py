@@ -115,7 +115,7 @@ class Ui_forecast_base(object):
         self.OWM_data_temp.setStyleSheet("background-color :rgb(255, 69, 0);\n"
                                          "color: white;\n"
                                          "border: none;")
-        self.OWM_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.OWM_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.OWM_data_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.OWM_data_temp.setWordWrap(False)
         self.OWM_data_temp.setObjectName("OWM_data_temp")
@@ -202,7 +202,7 @@ class Ui_forecast_base(object):
         self.WeatherBit_data_temp.setStyleSheet("background-color :rgb(255, 69, 0);\n"
                                                 "color: white;\n"
                                                 "border: none;")
-        self.WeatherBit_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.WeatherBit_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.WeatherBit_data_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.WeatherBit_data_temp.setWordWrap(False)
         self.WeatherBit_data_temp.setObjectName("WeatherBit_data_temp")

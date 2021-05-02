@@ -1,7 +1,10 @@
 from time import sleep
 from datetime import datetime
 import json
-from main import wbet, owm, sensor_dht
+#from Classes.Weather import OpenWeatherMap, WeatherBit
+#from Classes.Sensor import Sensor
+#from apis_input_data_connect import *
+from main import sensor_dht, wbit, owm
 
 
 def get_current_data(sensor, weatherbit, openweathermap):
@@ -19,10 +22,10 @@ def get_current_data(sensor, weatherbit, openweathermap):
     global temp_openweathermap
     global humidity_openweathermap
 
-    file_for_sensor = open(f"sensor_data.json", "w+")
-    file_for_weatherbit = open(f"weatherbit_data.json", "w+")
-    file_for_openweathermap = open(f"openweathermap_data.json", "w+")
-    current_dates.append(str(f"{str(datetime.now())}"))
+    file_for_sensor = open("sensor_data.json", "w+")
+    file_for_weatherbit = open("weatherbit_data.json", "w+")
+    file_for_openweathermap = open("openweathermap_data.json", "w+")
+    current_dates.append(str(datetime.now()))
 
     humidity, temp = sensor.get_data()
     temp_sensor.append(humidity)
@@ -34,19 +37,22 @@ def get_current_data(sensor, weatherbit, openweathermap):
     temp_weatherbit.append(humidity)
     humidity_weatherbit.append(temp)
     current_weather_data_wbit = {"date": current_dates, "temp": temp_weatherbit, "humidity": humidity_weatherbit}
-    json.dump(current_weather_data_wbit, file_for_sensor)
+    json.dump(current_weather_data_wbit, file_for_weatherbit)
 
 
     humidity, temp = openweathermap.get_current_data()
     temp_openweathermap.append(humidity)
     humidity_openweathermap.append(temp)
+    #print(type(current_weather_data_owm))
     current_weather_data_owm = {"date": current_dates, "temp": temp_openweathermap, "humidity": humidity_openweathermap}
-    json.dump(current_weather_data_owm, file_for_sensor)
+    #print(type(current_weather_data_owm))
+    json.dump(current_weather_data_owm, file_for_openweathermap)
 
 
-current_weather_data_sensor = list()
-current_weather_data_wbit = list()
-current_weather_data_owm = list()
+current_weather_data_sensor = dict()
+current_weather_data_wbit = dict()
+current_weather_data_owm = dict()
+
 current_dates = list()
 
 temp_sensor = list()
@@ -58,6 +64,11 @@ humidity_weatherbit = list()
 temp_openweathermap = list()
 humidity_openweathermap = list()
 
+#wbit = WeatherBit(API_KEY_WEATHERBIT, LATITUDE, LONGITUDE)
+#owm = OpenWeatherMap(API_KEY_OWM, LATITUDE, LONGITUDE)
+#sensor_dht = Sensor(SENSOR_PIN, SENSOR_MODEl)
+
 while True:
-    get_current_data(sensor_dht, wbet, owm)
+    get_current_data(sensor_dht, wbit, owm)
+    print('Save')
     sleep(3600)

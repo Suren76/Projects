@@ -34,7 +34,7 @@ class Ui_SensorLiveMode(object):
         self.Sensor_data_temp.setStyleSheet("background-color: #00BFFF;\n"
 "color: white;\n"
 "")
-        self.Sensor_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
+        #self.Sensor_data_temp.setTextFormat(QtCore.Qt.MarkdownText)
         self.Sensor_data_temp.setAlignment(QtCore.Qt.AlignCenter)
         self.Sensor_data_temp.setObjectName("Sensor_data_temp")
         self.Sensor_data = QtWidgets.QLabel(self.centralwidget)

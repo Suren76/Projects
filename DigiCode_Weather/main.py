@@ -48,8 +48,12 @@ humidity, temp = wbit.get_current_data()
 ui.WeatherBit_data_temp.setText(str(round(temp)))
 ui.WeatherBit_data_humidity.setText(str(round(humidity)))
 
-timer_for_current_api_data = QTimer()
-timer_for_current_sensor_data = QTimer()
+humidity, temp = sensor_dht.get_data()
+ui.Sensor_data_temp.setText(str(round(temp)))
+ui.Sensor_data_humidity.setText(str(round(humidity)))
+
+ui.timer_for_current_api_data = QTimer()
+ui.timer_for_current_sensor_data = QTimer()
 
 def send_current_api_data():
     humidity, temp = owm.get_current_data()
@@ -63,16 +67,15 @@ def send_current_api_data():
 def send_current_sensor_data():
     humidity, temp = sensor_dht.get_data()
     ui.Sensor_data_temp.setText(str(round(temp)))
-    ui.Sensor_data_temp.setText(str(datetime.now().minute))
     ui.Sensor_data_humidity.setText(str(round(humidity)))
 
 
 
-timer_for_current_api_data.timeout.connect(send_current_api_data)
-timer_for_current_api_data.start(3600000)
+ui.timer_for_current_api_data.timeout.connect(send_current_api_data)
+ui.timer_for_current_api_data.start(3600000)
 
-timer_for_current_sensor_data.timeout.connect(send_current_sensor_data)
-timer_for_current_sensor_data.start(60000)
+ui.timer_for_current_sensor_data.timeout.connect(send_current_sensor_data)
+ui.timer_for_current_sensor_data.start(60000)
 
 
 def open_About_window():
@@ -89,15 +92,16 @@ def open_Sensor_Live_Mode_window():
     ui = Ui_SensorLiveMode()
     ui.setupUi(Sensor_Live_Mode)
     Sensor_Live_Mode.show()
+    ui.timer_for_live_mode_sensor_data = QTimer()
 
     def send_live_mode_sensor_data():
         humidity, temp = sensor_dht.get_data()
-        # ui.Sensor_data_temp.setText(str(int(temp)))
-        ui.Sensor_data_temp.setText(str(datetime.now().second))
+        ui.Sensor_data_temp.setText(str(int(temp)))
+        #ui.Sensor_data_temp.setText(str(datetime.now().second))
         ui.Sensor_data_humidity.setText(str(int(humidity)))
 
-    timer_for_current_sensor_data.timeout.connect(send_live_mode_sensor_data)
-    timer_for_current_sensor_data.start(1000)
+    ui.timer_for_live_mode_sensor_data.timeout.connect(send_live_mode_sensor_data)
+    ui.timer_for_live_mode_sensor_data.start(700)
 
 
 def open_Weather_for_Week_window():
@@ -140,7 +144,8 @@ def open_Statistic_window():
     weatherbit_get_data = json.load(open("weatherbit_data.json"))
     openweathermap_get_data = json.load(open("openweathermap_data.json"))
 
-    for i in range(len(sensor_get_data)):
+    for i in range(len(sensor_get_data["date"])):
+        i = i-1
         ui.SensorData_base(sensor_get_data['temp'][i], sensor_get_data['humidity'][i], sensor_get_data['date'][i])
 
         wbit_statistic_current_data = statistic_for_hours(sensor_get_data, wbit.get_hourly_data())

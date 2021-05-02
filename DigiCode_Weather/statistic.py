@@ -19,7 +19,7 @@ def summarize_statistic(res_dict):
         humidity += res_dict[t]["humidity"]
 
     temp = temp/len(res_dict)
-    humidity = humidity/len(humidity)
+    humidity = humidity/len(res_dict)
 
     return {"temp": temp, "humidity": humidity}
 
