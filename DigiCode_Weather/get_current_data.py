@@ -28,21 +28,21 @@ def get_current_data(sensor, weatherbit, openweathermap):
     current_dates.append(str(datetime.now()))
 
     humidity, temp = sensor.get_data()
-    temp_sensor.append(humidity)
-    humidity_sensor.append(temp)
+    temp_sensor.append(temp)
+    humidity_sensor.append(humidity)
     current_weather_data_sensor = {"date": current_dates, "temp": temp_sensor, "humidity": humidity_sensor}
     json.dump(current_weather_data_sensor, file_for_sensor)
 
     humidity, temp = weatherbit.get_current_data()
-    temp_weatherbit.append(humidity)
-    humidity_weatherbit.append(temp)
+    temp_weatherbit.append(temp)
+    humidity_weatherbit.append(humidity)
     current_weather_data_wbit = {"date": current_dates, "temp": temp_weatherbit, "humidity": humidity_weatherbit}
     json.dump(current_weather_data_wbit, file_for_weatherbit)
 
 
     humidity, temp = openweathermap.get_current_data()
-    temp_openweathermap.append(humidity)
-    humidity_openweathermap.append(temp)
+    temp_openweathermap.append(temp)
+    humidity_openweathermap.append(humidity)
     #print(type(current_weather_data_owm))
     current_weather_data_owm = {"date": current_dates, "temp": temp_openweathermap, "humidity": humidity_openweathermap}
     #print(type(current_weather_data_owm))

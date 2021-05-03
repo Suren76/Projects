@@ -31,6 +31,8 @@ owm: OpenWeatherMap = OpenWeatherMap(API_KEY_OWM, LATITUDE, LONGITUDE)
 sensor_dht: Sensor = Sensor(SENSOR_PIN, SENSOR_MODEl)
 os.system("python get_current_data.py &")
 
+weatherbit_app_start_data = wbit.get_hourly_data()
+openweathermap_app_start_data = owm.get_hourly_data()
 
 app = QtWidgets.QApplication(sys.argv)
 
@@ -148,8 +150,8 @@ def open_Statistic_window():
         i = i-1
         ui.SensorData_base(sensor_get_data['temp'][i], sensor_get_data['humidity'][i], sensor_get_data['date'][i])
 
-        wbit_statistic_current_data = statistic_for_hours(sensor_get_data, wbit.get_hourly_data())
-        owm_statistic_current_data = statistic_for_hours(sensor_get_data, owm.get_hourly_data())
+        wbit_statistic_current_data = statistic_for_hours(sensor_get_data, weatherbit_app_start_data)
+        owm_statistic_current_data = statistic_for_hours(sensor_get_data, openweathermap_app_start_data)
 
         wbit_statistic_get_data = statistic_for_hours(sensor_get_data, weatherbit_get_data)
         owm_statistic_get_data = statistic_for_hours(sensor_get_data, openweathermap_get_data)
